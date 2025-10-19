@@ -106,10 +106,10 @@ desarrollando **modelos predictivos y analíticos** que optimizan procesos y dec
 
 ---
 
-## 📊 Nivel de dominio (didáctico y animado)
+## 📊 Nivel de dominio 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/luisCT1/luisCT1/main/skills.svg" alt="Nivel de dominio de habilidades" width="460">
+  <img src="./skills.svg" alt="Nivel de dominio de habilidades" width="460">
 </p>
 
 ---
