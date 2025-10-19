@@ -1,211 +1,261 @@
-<!doctype html>
-<html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Luis Cohen — Desarrollador Full Stack</title>
-  <meta name="description" content="Portfolio de Luis Cohen: Full Stack, Python, R, C++, Java, Docker. Música, código y buena energía." />
-  <meta property="og:title" content="Luis Cohen — Full Stack" />
-  <meta property="og:description" content="👾 Programador por pasión, no por error de sintaxis. Full Stack | Python | R | C++ | Java | Docker." />
-  <meta property="og:type" content="website" />
-  <meta name="color-scheme" content="light dark" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👾</text></svg>">
-  <style>
-    :root{
-      --bg:#0b0c10; --card:#12141a; --fg:#e6edf3; --muted:#9aa4ad; --accent:#6ee7b7; --accent-2:#8ab4f8;
-      --ring:rgba(110,231,183,.3);
-    }
-    @media (prefers-color-scheme: light){
-      :root{ --bg:#f6f8fa; --card:#ffffff; --fg:#0b1320; --muted:#5a6672; --accent:#0ea5e9; --accent-2:#7c3aed; --ring:rgba(14,165,233,.25); }
-    }
-    html,body{height:100%}
-    body{
-      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
-      background: radial-gradient(1200px 600px at 10% -10%, rgba(124,58,237,.10), transparent 60%),
-                  radial-gradient(900px 500px at 110% 10%, rgba(14,165,233,.10), transparent 55%),
-                  var(--bg);
-      color:var(--fg);
-      line-height:1.6;
-    }
-    .wrap{max-width:1000px; margin:0 auto; padding:28px 20px 64px;}
-    header{
-      display:flex; align-items:center; justify-content:space-between; gap:16px; padding:6px 0 8px;
-      position:sticky; top:0; backdrop-filter: blur(10px); background: color-mix(in srgb, var(--bg) 80%, transparent);
-      border-bottom:1px solid color-mix(in srgb, var(--fg) 12%, transparent);
-      z-index:10;
-    }
-    nav a{
-      color:var(--muted); text-decoration:none; margin-left:18px; font-weight:600; letter-spacing:.2px;
-    }
-    nav a:hover{ color:var(--fg) }
-    .hero{
-      display:grid; grid-template-columns: 1.2fr .8fr; gap:28px; align-items:center; margin-top:36px;
-    }
-    .card{
-      background:linear-gradient(180deg, color-mix(in srgb, var(--card) 92%, transparent), var(--card));
-      border:1px solid color-mix(in srgb, var(--fg) 10%, transparent);
-      border-radius:20px; padding:24px; box-shadow: 0 10px 30px rgba(0,0,0,.15);
-    }
-    .pill{ display:inline-flex; align-items:center; gap:8px; font-size:12px; padding:6px 10px; border-radius:999px;
-      border:1px solid color-mix(in srgb, var(--fg) 12%, transparent); color:var(--muted); background: color-mix(in srgb, var(--card) 92%, transparent);}
-    h1{ font-size:clamp(28px, 5vw, 44px); line-height:1.15; margin:10px 0 4px;}
-    .sub{ color:var(--muted); font-size:clamp(14px,2.1vw,18px); margin:6px 0 18px; }
-    .actions{ display:flex; gap:12px; flex-wrap:wrap; margin-top:10px }
-    .btn{
-      appearance:none; border:0; cursor:pointer; font-weight:700; letter-spacing:.2px;
-      padding:12px 16px; border-radius:12px; transition:transform .04s ease, box-shadow .2s ease;
-      box-shadow: 0 6px 18px rgba(0,0,0,.15);
-    }
-    .btn-primary{ background:linear-gradient(180deg, var(--accent), color-mix(in srgb, var(--accent) 70%, black)); color:#051014 }
-    .btn-ghost{ background:transparent; color:var(--fg); border:1px solid color-mix(in srgb, var(--fg) 18%, transparent) }
-    .btn:active{ transform: translateY(1px) }
-    .grid{ display:grid; grid-template-columns: repeat(2, 1fr); gap:20px; margin-top:20px;}
-    .bio p{ margin:.4rem 0 }
-    .stack{ display:flex; flex-wrap:wrap; gap:10px; margin-top:6px }
-    .chip{
-      border:1px solid color-mix(in srgb, var(--fg) 12%, transparent);
-      padding:8px 10px; border-radius:12px; background: color-mix(in srgb, var(--card) 92%, transparent);
-      display:inline-flex; align-items:center; gap:8px; font-weight:600;
-    }
-    .chip svg{ width:18px; height:18px }
-    .section{ margin-top:44px }
-    .section h2{ font-size:22px; margin:0 0 10px }
-    footer{ margin-top:50px; color:var(--muted); font-size:14px; text-align:center }
-    .kbd{font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size:12px; padding:2px 6px; border-radius:6px;
-      border:1px solid color-mix(in srgb, var(--fg) 18%, transparent); background: color-mix(in srgb, var(--card) 92%, transparent)}
-    @media (max-width: 860px){
-      .hero{ grid-template-columns: 1fr; }
-      nav{display:none}
-    }
-    .ring{ outline: 2px solid var(--ring); outline-offset: 4px; border-radius: 16px }
-    .projects{ display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:16px }
-    .project{ padding:18px; border-radius:16px; border:1px solid color-mix(in srgb, var(--fg) 12%, transparent);
-      background: color-mix(in srgb, var(--card) 94%, transparent) }
-    .project h3{ margin:4px 0 6px; font-size:18px }
-    .project p{ margin:0; color:var(--muted) }
-    a.link{ color: var(--accent-2); text-decoration: none; font-weight: 700 }
-    a.link:hover{ text-decoration: underline }
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <header>
-      <div class="pill">👋 Hola, Soy <strong>Luis Cohen</strong></div>
-      <nav>
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#stack">Stack</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-    </header>
+<!-- Imagen debajo del saludo -->
+<p align="center">
+  <img src="https://raw.githubusercontent.com/luisCT1/luisCT1/main/imagen.png" alt="Luis Cohen programando bajo un bonsái" width="100%" style="border-radius:20px; box-shadow:0 4px 14px rgba(0,0,0,.4);" />
+</p>
 
-    <main>
-      <section class="hero">
-        <div class="card ring">
-          <div class="pill">🧩 Opción 4 — Divertida y cercana</div>
-          <h1>Desarrollador Full Stack</h1>
-          <p class="sub">
-            👾 Programador por pasión, no por error de sintaxis.<br/>
-            🧑‍💻 Frontend + Backend = Full Stack.<br/>
-            🎸 Música, código y buena energía siempre.
-          </p>
-          <div class="actions">
-            <a class="btn btn-primary" href="#proyectos">🚀 Ver proyectos</a>
-            <a class="btn btn-ghost" href="#contacto">💬 Hablemos</a>
-          </div>
-        </div>
+<!-- Encabezado animado principal (ancho/alto ampliados) -->
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=34&pause=1000&color=6EE7B7&center=true&vCenter=true&width=1200&height=80&lines=Hola%2C+Soy+Luis+Cohen+👋;Desarrollador+Full+Stack;Apasionado+por+la+gen%C3%A9tica+y+la+IA;M%C3%BAsica%2C+c%C3%B3digo+y+buena+energ%C3%ADa+siempre" alt="Typing SVG" />
+</p>
 
-        <div class="card bio" id="sobre-mi">
-          <h2>Sobre mí</h2>
-          <p>Me gusta construir productos simples, rápidos y útiles. Disfruto el <span class="kbd">clean code</span>, la automatización y el aprendizaje continuo.</p>
-          <p>Actualmente enfocado en <strong>Python</strong> y <strong>datos</strong>, sin dejar de lado <strong>frontend</strong> y <strong>backend</strong>.</p>
-        </div>
-      </section>
+<!-- Frase animada en orden: primero 'por pasión', luego 'no por error...' -->
+<p align="center">
+  <img
+    src="https://readme-typing-svg.herokuapp.com?font=Poppins:wght@800&size=40&duration=2300&pause=900&color=06B6D4&center=true&vCenter=true&width=1200&height=52&lines=👾+Programador+por+pasi%C3%B3n"
+    alt="Programador por pasión"
+  />
+  <img
+    src="https://readme-typing-svg.herokuapp.com?font=Poppins:wght@800&size=40&duration=2300&pause=900&color=F59E0B&center=true&vCenter=true&width=1200&height=52&lines=no+por+error+de+sintaxis+👾"
+    alt="no por error de sintaxis"
+  />
+</p>
 
-      <section class="section" id="stack">
-        <h2>🛠️ Stack principal</h2>
-        <div class="stack">
-          <!-- Python -->
-          <span class="chip" title="Python">
-            <svg viewBox="0 0 128 128" aria-hidden="true"><path d="M63.4 1.6c-8.2 0-15 1.2-20.3 3.6-3.2 1.5-5.8 3.4-7.7 5.8-1.9 2.3-3.2 4.9-3.8 7.8-.6 2.8-.9 5.6-.9 8.4v15.2h41.3v5.1H21.1c-4.7 0-8.6 1.1-11.6 3.4-3 2.2-4.9 5.7-5.8 10.3-.9 4.6-1.3 10.1-1.3 16.4 0 6.2.5 11.5 1.6 15.8 1.1 4.3 2.8 7.6 5.2 9.9 2.4 2.3 5.4 3.8 9.2 4.5 3.8.7 8.3 1.1 13.5 1.1h8.9v-12.6c0-5.2 1.4-9.1 4.1-11.8 2.8-2.7 6.5-4 11.1-4h20.9c4.4 0 7.9-1.3 10.5-3.9 2.6-2.6 4.6-6.1 5.8-10.6 1.2-4.5 1.9-9.8 1.9-16.1 0-6.1-.5-11.2-1.5-15.4-1-4.2-2.6-7.4-4.8-9.6-2.2-2.2-5.1-3.7-8.6-4.5-3.5-.9-7.7-1.3-12.6-1.3H63.4z" fill="currentColor"/></svg>
-            Python
-          </span>
-          <!-- R -->
-          <span class="chip" title="R">
-            <svg viewBox="0 0 128 128" aria-hidden="true"><ellipse cx="64" cy="64" rx="60" ry="42" fill="none" stroke="currentColor" stroke-width="10"/><path d="M48 80h20c18 0 28-8 28-20s-10-20-28-20H40v68" fill="none" stroke="currentColor" stroke-width="10"/></svg>
-            R
-          </span>
-          <!-- C++ -->
-          <span class="chip" title="C++">
-            <svg viewBox="0 0 128 128" aria-hidden="true"><path d="M64 6l52 30v56L64 122 12 92V36L64 6z" fill="none" stroke="currentColor" stroke-width="10"/><text x="40" y="78" font-size="34" font-weight="700" fill="currentColor">C++</text></svg>
-            C++
-          </span>
-          <!-- Java -->
-          <span class="chip" title="Java">
-            <svg viewBox="0 0 128 128" aria-hidden="true"><path d="M64 20c14 18-14 22 0 38-18-6-4-18 0-38zM30 96c22 10 46 10 68 0" fill="none" stroke="currentColor" stroke-width="8"/></svg>
-            Java
-          </span>
-          <!-- Docker -->
-          <span class="chip" title="Docker">
-            <svg viewBox="0 0 128 128" aria-hidden="true"><rect x="16" y="64" width="24" height="18" rx="3" ry="3" stroke="currentColor" fill="none" stroke-width="6"/><rect x="44" y="64" width="24" height="18" rx="3" ry="3" stroke="currentColor" fill="none" stroke-width="6"/><rect x="72" y="64" width="24" height="18" rx="3" ry="3" stroke="currentColor" fill="none" stroke-width="6"/><path d="M12 90h100c0 10-10 20-30 20H42C24 110 12 100 12 90z" fill="none" stroke="currentColor" stroke-width="6"/></svg>
-            Docker
-          </span>
-          <!-- etc -->
-          <span class="chip" title="y más">✨ etc.</span>
-        </div>
-      </section>
 
-      <section class="section" id="proyectos">
-        <h2>📦 Proyectos destacados</h2>
-        <div class="projects">
-          <article class="project">
-            <h3>🧠 Analítica con Python + R</h3>
-            <p>Pipelines reproducibles, notebooks limpios y visualizaciones claras.</p>
-            <p><a class="link" href="#" target="_blank" rel="noopener">Ver repo</a></p>
-          </article>
-          <article class="project">
-            <h3>⚙️ API en Docker</h3>
-            <p>Microservicio ligero con buenas prácticas de CI/CD y contenedores.</p>
-            <p><a class="link" href="#" target="_blank" rel="noopener">Ver repo</a></p>
-          </article>
-          <article class="project">
-            <h3>💻 C++ Performance</h3>
-            <p>Ejemplos de estructuras de datos y optimización low-level.</p>
-            <p><a class="link" href="#" target="_blank" rel="noopener">Ver repo</a></p>
-          </article>
-        </div>
-      </section>
 
-      <section class="section card" id="contacto">
-        <h2>📬 Contacto</h2>
-        <p>¿Colaboramos? Escríbeme o revisa mi código:</p>
-        <div class="actions">
-          <a class="btn btn-primary" href="https://github.com/" target="_blank" rel="noopener">⭐ GitHub</a>
-          <a class="btn btn-ghost" href="mailto:luiscohen2014@gmail.com">✉️ Email</a>
-          <a class="btn btn-ghost" href="https://www.linkedin.com/" target="_blank" rel="noopener">🔗 LinkedIn</a>
-        </div>
-      </section>
+## 🧠 Sobre mí
 
-      <footer>
-        Hecho con 💚 y buen café. — © <span id="yr"></span> Luis Cohen
-      </footer>
-    </main>
+🐮 Soy un apasionado por el **mejoramiento genético en animales**, la **programación** y la **inteligencia artificial**.  
+Me gusta construir productos simples, rápidos y útiles.  
+Disfruto la **automatización**, el **aprendizaje continuo** y aplicar la ciencia de datos al campo.  
+
+Actualmente enfocado en **Python**, **R** y **análisis de datos**, sin dejar de lado **frontend**, **backend** y **visualización**.  
+He trabajado en proyectos relacionados con el **mejoramiento genético en bovinos** 🧬, realizando evaluaciones y modelos predictivos que combinan biología, estadística y programación.
+
+---
+
+### 🐂 Experiencia en mejoramiento genético
+
+🌿 Actualmente realizo las **evaluaciones genéticas de [Francia y Lusitania](http://instagram.com/haciendasfranciaylusitania/?hl=es)**,  
+una reconocida **ganadería de Brahman rojo** en Montería, Colombia.  
+
+🐄 También he desarrollado modelos para **[Hacienda El Herrero](https://www.instagram.com/el_herrero_holstein/)**,  
+especializada en **Holsteins** en San Pedro de los Milagros, Colombia.  
+
+📊 Colaboro activamente con **[Data Plus](https://www.instagram.com/dataplusempresa/)**,  
+donde trabajamos en **evaluaciones genéticas en diferentes especies**, entre ellas búfalos 🦬, y realizamos **análisis de datos** en distintas áreas.
+
+---
+
+### ⚙️ Ciencia de datos aplicada
+
+⚡ Actualmente colaboro con **[AURES BAJO](https://www.aures.com.co/quienes-somos)** (hidroeléctrica en Colombia),  
+desarrollando **modelos predictivos y analíticos** que optimizan procesos y decisiones energéticas.  
+
+🔬 Además, he trabajado junto a **[CEERA](https://ceera.co/)** en proyectos de investigación, innovación y desarrollo sostenible.  
+
+---
+
+💡 Mi enfoque combina la ciencia, la tecnología y la creatividad para **convertir datos en decisiones**.  
+🌎 Busco seguir integrando la **IA y la genética animal** con herramientas modernas de programación.
+
+## 💡 Herramientas y tecnologías que uso
+
+<p align="center">
+
+  <!-- Lenguajes -->
+  <img alt="Python" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" style="background:#0f172a;border-radius:10px;padding:6px;margin:4px;height:36px;">
+  <img alt="R" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" style="background:#0f172a;border-radius:10px;padding:6px;margin:4px;height:36px;">
+  <img alt="C++" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" style="background:#0f172a;border-radius:10px;padding:6px;margin:4px;height:36px;">
+  <img alt="Rust" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg" style="background:#0f172a;border-radius:10px;padding:6px;margin:4px;height:36px;">
+  <img alt="Java" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" style="background:#0f172a;border-radius:10px;padding:6px;margin:4px;height:36px;">
+  <img alt="JavaScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" style="background:#0f172a;border-radius:10px;padding:6px;margin:4px;height:36px;">
+  <img alt="HTML" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" style="background:#0f172a;border-radius:10px;padding:6px;margin:4px;height:36px;">
+  <img alt="CSS" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" style="background:#0f172a;border-radius:10px;padding:6px;margin:4px;height:36px;">
+  <img alt="Markdown" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg" style="background:#0f172a;border-radius:10px;padding:6px;margin:4px;height:36px;">
+
+  <!-- R Markdown / Shiny -->
+  <img alt="RMarkdown" src="https://img.shields.io/badge/RMarkdown-2C3E50?style=flat-square&logo=r&logoColor=white" style="background:#0f172a;border-radius:8px;padding:4px 6px;margin:6px 4px;height:22px;">
+  <img alt="Shiny" src="https://img.shields.io/badge/Shiny-75AADB?style=flat-square&logo=rstudio&logoColor=white" style="background:#0f172a;border-radius:8px;padding:4px 6px;margin:6px 4px;height:22px;">
+
+  <!-- Bases de datos -->
+  <img alt="MySQL" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" style="background:#0f172a;border-radius:10px;padding:6px;margin:4px;height:36px;">
+  <img alt="PostgreSQL" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" style="background:#0f172a;border-radius:10px;padding:6px;margin:4px;height:36px;">
+
+  <!-- Ciencia de datos -->
+  <img alt="TensorFlow" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" style="background:#0f172a;border-radius:10px;padding:6px;margin:4px;height:36px;">
+  <img alt="PyTorch" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" style="background:#0f172a;border-radius:10px;padding:6px;margin:4px;height:36px;">
+  <img alt="Keras" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg" style="background:#0f172a;border-radius:10px;padding:6px;margin:4px;height:36px;">
+  <img alt="Power BI" src="https://www.vectorlogo.zone/logos/microsoft_powerbi/microsoft_powerbi-icon.svg" style="background:#0f172a;border-radius:10px;padding:6px;margin:4px;height:36px;">
+  <img alt="Anaconda" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/anaconda/anaconda-original.svg" style="background:#0f172a;border-radius:10px;padding:6px;margin:4px;height:36px;">
+
+  <!-- IDEs y sistemas -->
+  <img alt="VS Code" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" style="background:#0f172a;border-radius:10px;padding:6px;margin:4px;height:36px;">
+  <img alt="Spyder" src="https://cdn.simpleicons.org/spyderide/FF0000" style="background:#0f172a;border-radius:10px;padding:6px;margin:4px;height:36px;">
+  <img alt="Linux" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" style="background:#0f172a;border-radius:10px;padding:6px;margin:4px;height:36px;">
+  <img alt="Docker" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" style="background:#0f172a;border-radius:10px;padding:6px;margin:4px;height:36px;">
+  <img alt="Google Cloud" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" style="background:#0f172a;border-radius:10px;padding:6px;margin:4px;height:36px;">
+  <img alt="Android" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-plain.svg" style="background:#0f172a;border-radius:10px;padding:6px;margin:4px;height:36px;">
+  <img alt="GitHub" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" style="background:#0f172a;border-radius:10px;padding:6px;margin:4px;height:36px;">
+
+  <!-- Diseño -->
+  <img alt="Photoshop" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" style="background:#0f172a;border-radius:10px;padding:6px;margin:4px;height:36px;">
+  <img alt="After Effects" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-original.svg" style="background:#0f172a;border-radius:10px;padding:6px;margin:4px;height:36px;">
+  <img alt="AutoCAD" src="https://cdn.simpleicons.org/autodesk/0696D7" style="background:#0f172a;border-radius:10px;padding:6px;margin:4px;height:36px;">
+  <img alt="GRASS GIS" src="https://img.shields.io/badge/GRASS%20GIS-1F2937?style=flat-square" style="background:#0f172a;border-radius:8px;padding:4px 6px;margin:6px 4px;height:22px;">
+</p>
+
+---
+
+## 📊 Nivel de dominio (didáctico y animado)
+
+<div align="center">
+  <div style="width: 420px; background:#0b1320; border:1px solid #233044; border-radius:14px; box-shadow:0 8px 24px rgba(0,0,0,.35); padding:14px 16px; text-align:left; font-family: ui-sans-serif,system-ui,Segoe UI,Roboto,Arial; color:#e6edf3">
+    <div style="font-weight:800; letter-spacing:.2px; margin:4px 0 10px; font-size:18px; display:flex; align-items:center; gap:8px">
+      📊 Nivel de dominio (skills)
+    </div>
+
+    <!-- JavaScript — 90% => 288 -->
+    <div style="display:flex; justify-content:space-between; font-weight:700; margin:10px 2px 4px; font-size:13px"><span>JavaScript</span><span>90%</span></div>
+    <svg width="100%" height="16" viewBox="0 0 320 16">
+      <defs>
+        <linearGradient id="g-js" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#fde047"/><stop offset="100%" stop-color="#f59e0b"/></linearGradient>
+        <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="rgba(255,255,255,0)"/><stop offset="50%" stop-color="rgba(255,255,255,.45)"/><stop offset="100%" stop-color="rgba(255,255,255,0)"/></linearGradient>
+        <mask id="m-js"><rect x="0" y="0" width="320" height="16" fill="black"/><rect x="-80" y="0" width="80" height="16" fill="url(#shine)"><animate attributeName="x" from="-80" to="320" dur="2.2s" repeatCount="indefinite"/></rect></mask>
+      </defs>
+      <rect x="0" y="4" width="320" height="8" rx="4" fill="#1f2a44"/>
+      <rect x="0" y="4" width="288" height="8" rx="4" fill="url(#g-js)" mask="url(#m-js)"><animate attributeName="width" from="0" to="288" dur="0.9s" fill="freeze"/></rect>
+    </svg>
+
+    <!-- TypeScript — 78% => 250 -->
+    <div style="display:flex; justify-content:space-between; font-weight:700; margin:10px 2px 4px; font-size:13px"><span>TypeScript</span><span>78%</span></div>
+    <svg width="100%" height="16" viewBox="0 0 320 16">
+      <defs>
+        <linearGradient id="g-ts" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#60a5fa"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient>
+        <mask id="m-ts"><rect x="0" y="0" width="320" height="16" fill="black"/><rect x="-80" y="0" width="80" height="16" fill="url(#shine)"><animate attributeName="x" from="-80" to="320" dur="2.2s" repeatCount="indefinite"/></rect></mask>
+      </defs>
+      <rect x="0" y="4" width="320" height="8" rx="4" fill="#1f2a44"/>
+      <rect x="0" y="4" width="250" height="8" rx="4" fill="url(#g-ts)" mask="url(#m-ts)"><animate attributeName="width" from="0" to="250" dur="0.9s" fill="freeze"/></rect>
+    </svg>
+
+    <!-- HTML — 72% => 230 -->
+    <div style="display:flex; justify-content:space-between; font-weight:700; margin:10px 2px 4px; font-size:13px"><span>HTML</span><span>72%</span></div>
+    <svg width="100%" height="16" viewBox="0 0 320 16">
+      <defs>
+        <linearGradient id="g-html" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#fb7185"/><stop offset="100%" stop-color="#ef4444"/></linearGradient>
+        <mask id="m-html"><rect x="0" y="0" width="320" height="16" fill="black"/><rect x="-80" y="0" width="80" height="16" fill="url(#shine)"><animate attributeName="x" from="-80" to="320" dur="2.2s" repeatCount="indefinite"/></rect></mask>
+      </defs>
+      <rect x="0" y="4" width="320" height="8" rx="4" fill="#1f2a44"/>
+      <rect x="0" y="4" width="230" height="8" rx="4" fill="url(#g-html)" mask="url(#m-html)"><animate attributeName="width" from="0" to="230" dur="0.9s" fill="freeze"/></rect>
+    </svg>
+
+    <!-- CSS — 69% => 221 -->
+    <div style="display:flex; justify-content:space-between; font-weight:700; margin:10px 2px 4px; font-size:13px"><span>CSS</span><span>69%</span></div>
+    <svg width="100%" height="16" viewBox="0 0 320 16">
+      <defs>
+        <linearGradient id="g-css" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#93c5fd"/><stop offset="100%" stop-color="#2563eb"/></linearGradient>
+        <mask id="m-css"><rect x="0" y="0" width="320" height="16" fill="black"/><rect x="-80" y="0" width="80" height="16" fill="url(#shine)"><animate attributeName="x" from="-80" to="320" dur="2.2s" repeatCount="indefinite"/></rect></mask>
+      </defs>
+      <rect x="0" y="4" width="320" height="8" rx="4" fill="#1f2a44"/>
+      <rect x="0" y="4" width="221" height="8" rx="4" fill="url(#g-css)" mask="url(#m-css)"><animate attributeName="width" from="0" to="221" dur="0.9s" fill="freeze"/></rect>
+    </svg>
+
+    <!-- Python — 88% => 282 -->
+    <div style="display:flex; justify-content:space-between; font-weight:700; margin:10px 2px 4px; font-size:13px"><span>Python</span><span>88%</span></div>
+    <svg width="100%" height="16" viewBox="0 0 320 16">
+      <defs>
+        <linearGradient id="g-py" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#34d399"/><stop offset="100%" stop-color="#10b981"/></linearGradient>
+        <mask id="m-py"><rect x="0" y="0" width="320" height="16" fill="black"/><rect x="-80" y="0" width="80" height="16" fill="url(#shine)"><animate attributeName="x" from="-80" to="320" dur="2.2s" repeatCount="indefinite"/></rect></mask>
+      </defs>
+      <rect x="0" y="4" width="320" height="8" rx="4" fill="#1f2a44"/>
+      <rect x="0" y="4" width="282" height="8" rx="4" fill="url(#g-py)" mask="url(#m-py)"><animate attributeName="width" from="0" to="282" dur="0.9s" fill="freeze"/></rect>
+    </svg>
+
+    <!-- R — 84% => 269 -->
+    <div style="display:flex; justify-content:space-between; font-weight:700; margin:10px 2px 4px; font-size:13px"><span>R</span><span>84%</span></div>
+    <svg width="100%" height="16" viewBox="0 0 320 16">
+      <defs>
+        <linearGradient id="g-r" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#60a5fa"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient>
+        <mask id="m-r"><rect x="0" y="0" width="320" height="16" fill="black"/><rect x="-80" y="0" width="80" height="16" fill="url(#shine)"><animate attributeName="x" from="-80" to="320" dur="2.2s" repeatCount="indefinite"/></rect></mask>
+      </defs>
+      <rect x="0" y="4" width="320" height="8" rx="4" fill="#1f2a44"/>
+      <rect x="0" y="4" width="269" height="8" rx="4" fill="url(#g-r)" mask="url(#m-r)"><animate attributeName="width" from="0" to="269" dur="0.9s" fill="freeze"/></rect>
+    </svg>
+
+    <!-- SQL — 80% => 256 -->
+    <div style="display:flex; justify-content:space-between; font-weight:700; margin:10px 2px 4px; font-size:13px"><span>SQL</span><span>80%</span></div>
+    <svg width="100%" height="16" viewBox="0 0 320 16">
+      <defs>
+        <linearGradient id="g-sql" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#93c5fd"/><stop offset="100%" stop-color="#2563eb"/></linearGradient>
+        <mask id="m-sql"><rect x="0" y="0" width="320" height="16" fill="black"/><rect x="-80" y="0" width="80" height="16" fill="url(#shine)"><animate attributeName="x" from="-80" to="320" dur="2.2s" repeatCount="indefinite"/></rect></mask>
+      </defs>
+      <rect x="0" y="4" width="320" height="8" rx="4" fill="#1f2a44"/>
+      <rect x="0" y="4" width="256" height="8" rx="4" fill="url(#g-sql)" mask="url(#m-sql)"><animate attributeName="width" from="0" to="256" dur="0.9s" fill="freeze"/></rect>
+    </svg>
+
+    <!-- Docker — 78% => 250 -->
+    <div style="display:flex; justify-content:space-between; font-weight:700; margin:10px 2px 4px; font-size:13px"><span>Docker</span><span>78%</span></div>
+    <svg width="100%" height="16" viewBox="0 0 320 16">
+      <defs>
+        <linearGradient id="g-docker" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#67e8f9"/><stop offset="100%" stop-color="#06b6d4"/></linearGradient>
+        <mask id="m-docker"><rect x="0" y="0" width="320" height="16" fill="black"/><rect x="-80" y="0" width="80" height="16" fill="url(#shine)"><animate attributeName="x" from="-80" to="320" dur="2.2s" repeatCount="indefinite"/></rect></mask>
+      </defs>
+      <rect x="0" y="4" width="320" height="8" rx="4" fill="#1f2a44"/>
+      <rect x="0" y="4" width="250" height="8" rx="4" fill="url(#g-docker)" mask="url(#m-docker)"><animate attributeName="width" from="0" to="250" dur="0.9s" fill="freeze"/></rect>
+    </svg>
+
+    <!-- TensorFlow — 70% => 224 -->
+    <div style="display:flex; justify-content:space-between; font-weight:700; margin:10px 2px 4px; font-size:13px"><span>TensorFlow</span><span>70%</span></div>
+    <svg width="100%" height="16" viewBox="0 0 320 16">
+      <defs>
+        <linearGradient id="g-tf" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#fb923c"/><stop offset="100%" stop-color="#f97316"/></linearGradient>
+        <mask id="m-tf"><rect x="0" y="0" width="320" height="16" fill="black"/><rect x="-80" y="0" width="80" height="16" fill="url(#shine)"><animate attributeName="x" from="-80" to="320" dur="2.2s" repeatCount="indefinite"/></rect></mask>
+      </defs>
+      <rect x="0" y="4" width="320" height="8" rx="4" fill="#1f2a44"/>
+      <rect x="0" y="4" width="224" height="8" rx="4" fill="url(#g-tf)" mask="url(#m-tf)"><animate attributeName="width" from="0" to="224" dur="0.9s" fill="freeze"/></rect>
+    </svg>
+
   </div>
+</div>
 
-  <script>
-    // Año dinámico + scroll suave
-    document.getElementById('yr').textContent = new Date().getFullYear();
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        const id = a.getAttribute('href');
-        const el = document.querySelector(id);
-        if(el){
-          e.preventDefault();
-          el.scrollIntoView({behavior:'smooth', block:'start'});
-          history.pushState(null,'',id);
-        }
-      });
-    });
-  </script>
-</body>
-</html>
+---
+
+## 📦 Proyectos destacados
+
+### 🧠 Analítica con Python + R  
+📊 Pipelines reproducibles, notebooks limpios y visualizaciones claras.  
+[🔗 Ver repo](#)
+
+---
+
+### ⚙️ API en Docker  
+🐳 Microservicio ligero con buenas prácticas de CI/CD y contenedores.  
+[🔗 Ver repo](#)
+
+---
+
+### 💻 C++ Performance  
+⚡ Ejemplos de estructuras de datos y optimización *low-level*.  
+[🔗 Ver repo](#)
+
+---
+
+## 📬 Contacto
+¿Colaboramos? Escríbeme o revisa mi código 👇  
+
+⭐ [GitHub](https://github.com/luisCT1)  
+✉️ [Email](mailto:luiscohen2014@gmail.com)  
+🔗 [LinkedIn](https://www.linkedin.com/)  
+
+---
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=luisCT1&show_icons=true&theme=tokyonight&hide_border=true" alt="Estadísticas de GitHub de Luis Cohen" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=luisCT1&theme=tokyonight&hide_border=true" alt="Racha de contribuciones de Luis Cohen" />
+</p>
+
+---
+
+**Hecho con 💚 y buen café. — © 2025 Luis Cohen**
