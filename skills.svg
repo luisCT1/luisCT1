@@ -1,22 +1,19 @@
-<!-- file: skills.svg -->
-<svg xmlns="http://www.w3.org/2000/svg" width="460" height="480" viewBox="0 0 460 480">
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="470" viewBox="0 0 460 470">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#0d1424"/>
       <stop offset="1" stop-color="#0b1320"/>
     </linearGradient>
-    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
       <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity=".35"/>
     </filter>
-
-    <!-- brillo que recorre la barra -->
     <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="rgba(255,255,255,0)"/>
       <stop offset="50%" stop-color="rgba(255,255,255,.45)"/>
       <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
     </linearGradient>
 
-    <!-- Gradientes de skills -->
+    <!-- Paletas -->
     <linearGradient id="g-js"  x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#fde047"/><stop offset="100%" stop-color="#f59e0b"/></linearGradient>
     <linearGradient id="g-ts"  x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#60a5fa"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient>
     <linearGradient id="g-html"x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#fb7185"/><stop offset="100%" stop-color="#ef4444"/></linearGradient>
@@ -27,17 +24,6 @@
     <linearGradient id="g-dk"  x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#67e8f9"/><stop offset="100%" stop-color="#06b6d4"/></linearGradient>
     <linearGradient id="g-tf"  x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#fb923c"/><stop offset="100%" stop-color="#f97316"/></linearGradient>
 
-    <!-- plantilla de barra -->
-    <symbol id="bar" viewBox="0 0 360 16" preserveAspectRatio="none">
-      <rect x="0" y="4" width="360" height="8" rx="4" fill="#1f2a44"/>
-      <rect id="fill" x="0" y="4" width="0" height="8" rx="4" fill="url(#g-js)"/>
-      <mask id="m-shine">
-        <rect x="0" y="0" width="360" height="16" fill="black"/>
-        <rect id="shineRect" x="-90" y="0" width="90" height="16" fill="url(#shine)"/>
-      </mask>
-      <rect id="shineCover" x="0" y="4" width="0" height="8" rx="4" fill="white" opacity=".18" mask="url(#m-shine)"/>
-    </symbol>
-
     <style>
       .title{font:700 18px 'Segoe UI',sans-serif; fill:#e6edf3}
       .name{font:700 13px 'Segoe UI',sans-serif; fill:#e6edf3}
@@ -46,73 +32,115 @@
   </defs>
 
   <!-- Card -->
-  <g filter="url(#cardShadow)">
-    <rect x="10" y="10" width="440" height="460" rx="16" fill="url(#bg)" stroke="#233044"/>
+  <g filter="url(#shadow)">
+    <rect x="10" y="10" width="440" height="450" rx="16" fill="url(#bg)" stroke="#233044"/>
+  </g>
+  <text class="title" x="36" y="50">📊 Nivel de dominio (skills)</text>
+
+  <!-- Función “row” sin scripts: duplicamos grupos a mano -->
+  <!-- Helper: ancho útil=360. width = porcentaje*3.6 -->
+
+  <!-- 1: JavaScript 90% -->
+  <g transform="translate(36,78)">
+    <text class="name" x="0" y="12">JavaScript</text>
+    <text class="pct"  x="360" y="12" text-anchor="end">90%</text>
+    <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
+    <rect x="0" y="18" width="324" height="8" rx="4" fill="url(#g-js)">
+      <animate attributeName="width" from="0" to="324" dur="0.9s" fill="freeze"/>
+    </rect>
+    <rect x="-90" y="18" width="90" height="8" fill="url(#shine)" opacity=".18">
+      <animate attributeName="x" from="-90" to="360" dur="2.4s" repeatCount="indefinite"/>
+    </rect>
   </g>
 
-  <text class="title" x="36" y="52">📊 Nivel de dominio (skills)</text>
+  <!-- 2: TypeScript 78% -->
+  <g transform="translate(36,126)">
+    <text class="name" x="0" y="12">TypeScript</text>
+    <text class="pct"  x="360" y="12" text-anchor="end">78%</text>
+    <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
+    <rect x="0" y="18" width="281" height="8" rx="4" fill="url(#g-ts)">
+      <animate attributeName="width" from="0" to="281" dur="0.9s" fill="freeze"/>
+    </rect>
+    <rect x="-90" y="18" width="90" height="8" fill="url(#shine)" opacity=".18">
+      <animate attributeName="x" from="-90" to="360" dur="2.4s" repeatCount="indefinite"/>
+    </rect>
+  </g>
 
-  <!-- helper para dibujar 1 barra (y, nombre, pct, gradId, anchoFinal) -->
-  <script type="text/ecmascript"><![CDATA[
-    function row(svg, y, name, pct, grad, width){
-      const g = document.createElementNS('http://www.w3.org/2000/svg','g');
-      g.setAttribute('transform','translate(36,'+y+')');
+  <!-- 3: HTML 72% -->
+  <g transform="translate(36,174)">
+    <text class="name" x="0" y="12">HTML</text>
+    <text class="pct"  x="360" y="12" text-anchor="end">72%</text>
+    <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
+    <rect x="0" y="18" width="259" height="8" rx="4" fill="url(#g-html)">
+      <animate attributeName="width" from="0" to="259" dur="0.9s" fill="freeze"/>
+    </rect>
+    <rect x="-90" y="18" width="90" height="8" fill="url(#shine)" opacity=".18">
+      <animate attributeName="x" from="-90" to="360" dur="2.4s" repeatCount="indefinite"/>
+    </rect>
+  </g>
 
-      const n = document.createElementNS(svg.namespaceURI,'text');
-      n.setAttribute('class','name'); n.setAttribute('x','0'); n.setAttribute('y','12');
-      n.textContent = name; g.appendChild(n);
+  <!-- 4: CSS 69% -->
+  <g transform="translate(36,222)">
+    <text class="name" x="0" y="12">CSS</text>
+    <text class="pct"  x="360" y="12" text-anchor="end">69%</text>
+    <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
+    <rect x="0" y="18" width="248" height="8" rx="4" fill="url(#g-css)">
+      <animate attributeName="width" from="0" to="248" dur="0.9s" fill="freeze"/>
+    </rect>
+    <rect x="-90" y="18" width="90" height="8" fill="url(#shine)" opacity=".18">
+      <animate attributeName="x" from="-90" to="360" dur="2.4s" repeatCount="indefinite"/>
+    </rect>
+  </g>
 
-      const p = document.createElementNS(svg.namespaceURI,'text');
-      p.setAttribute('class','pct'); p.setAttribute('x','360'); p.setAttribute('y','12'); p.setAttribute('text-anchor','end');
-      p.textContent = pct + '%'; g.appendChild(p);
+  <!-- 5: Python 88% -->
+  <g transform="translate(36,270)">
+    <text class="name" x="0" y="12">Python</text>
+    <text class="pct"  x="360" y="12" text-anchor="end">88%</text>
+    <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
+    <rect x="0" y="18" width="317" height="8" rx="4" fill="url(#g-py)">
+      <animate attributeName="width" from="0" to="317" dur="0.9s" fill="freeze"/>
+    </rect>
+    <rect x="-90" y="18" width="90" height="8" fill="url(#shine)" opacity=".18">
+      <animate attributeName="x" from="-90" to="360" dur="2.4s" repeatCount="indefinite"/>
+    </rect>
+  </g>
 
-      const use = document.createElementNS(svg.namespaceURI,'use');
-      use.setAttributeNS('http://www.w3.org/1999/xlink','href','#bar');
-      use.setAttribute('x','0'); use.setAttribute('y','18'); g.appendChild(use);
+  <!-- 6: R 84% -->
+  <g transform="translate(36,318)">
+    <text class="name" x="0" y="12">R</text>
+    <text class="pct"  x="360" y="12" text-anchor="end">84%</text>
+    <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
+    <rect x="0" y="18" width="302" height="8" rx="4" fill="url(#g-r)">
+      <animate attributeName="width" from="0" to="302" dur="0.9s" fill="freeze"/>
+    </rect>
+    <rect x="-90" y="18" width="90" height="8" fill="url(#shine)" opacity=".18">
+      <animate attributeName="x" from="-90" to="360" dur="2.4s" repeatCount="indefinite"/>
+    </rect>
+  </g>
 
-      // colorear y animar
-      const fill = document.createElementNS(svg.namespaceURI,'rect');
-      fill.setAttribute('x','0'); fill.setAttribute('y','22'); fill.setAttribute('height','8'); fill.setAttribute('rx','4');
-      fill.setAttribute('fill','url(#'+grad+')'); fill.setAttribute('width','0');
-      use.after(fill);
+  <!-- 7: SQL 80% -->
+  <g transform="translate(36,366)">
+    <text class="name" x="0" y="12">SQL</text>
+    <text class="pct"  x="360" y="12" text-anchor="end">80%</text>
+    <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
+    <rect x="0" y="18" width="288" height="8" rx="4" fill="url(#g-sql)">
+      <animate attributeName="width" from="0" to="288" dur="0.9s" fill="freeze"/>
+    </rect>
+    <rect x="-90" y="18" width="90" height="8" fill="url(#shine)" opacity=".18">
+      <animate attributeName="x" from="-90" to="360" dur="2.4s" repeatCount="indefinite"/>
+    </rect>
+  </g>
 
-      const shineCover = document.createElementNS(svg.namespaceURI,'rect');
-      shineCover.setAttribute('x','0'); shineCover.setAttribute('y','22'); shineCover.setAttribute('height','8'); shineCover.setAttribute('rx','4');
-      shineCover.setAttribute('fill','#fff'); shineCover.setAttribute('opacity','.18');
-      shineCover.setAttribute('mask','url(#m-shine)'); shineCover.setAttribute('width', '0');
-      fill.after(shineCover);
-
-      // animaciones
-      const a1 = document.createElementNS(svg.namespaceURI,'animate');
-      a1.setAttribute('attributeName','width'); a1.setAttribute('from','0'); a1.setAttribute('to', width);
-      a1.setAttribute('dur','0.9s'); a1.setAttribute('fill','freeze'); fill.appendChild(a1);
-
-      const a2 = document.createElementNS(svg.namespaceURI,'animate');
-      a2.setAttribute('attributeName','width'); a2.setAttribute('from','0'); a2.setAttribute('to', width);
-      a2.setAttribute('dur','0.9s'); a2.setAttribute('fill','freeze'); shineCover.appendChild(a2);
-
-      const sr = document.getElementById('shineRect').cloneNode(true);
-      const a3 = document.createElementNS(svg.namespaceURI,'animate');
-      a3.setAttribute('attributeName','x'); a3.setAttribute('from','-90'); a3.setAttribute('to','360');
-      a3.setAttribute('dur','2.4s'); a3.setAttribute('repeatCount','indefinite');
-      sr.appendChild(a3);
-      // insertar una copia del brillo dentro del grupo
-      g.appendChild(sr);
-
-      svg.appendChild(g);
-    }
-
-    const svg = document.documentElement;
-    // width = porcentaje * 3.6 (porque barra total = 360)
-    row(svg,  80, 'JavaScript', 90, 'g-js',  324);
-    row(svg, 130, 'TypeScript', 78, 'g-ts',  281);
-    row(svg, 180, 'HTML',       72, 'g-html',259);
-    row(svg, 230, 'CSS',        69, 'g-css', 248);
-    row(svg, 280, 'Python',     88, 'g-py',  317);
-    row(svg, 330, 'R',          84, 'g-r',   302);
-    row(svg, 380, 'SQL',        80, 'g-sql', 288);
-    row(svg, 430, 'Docker',     78, 'g-dk',  281);
-    // Ejemplo extra:
-    // row(svg, 480, 'TensorFlow', 70, 'g-tf', 252);
-  ]]></script>
+  <!-- 8: Docker 78% -->
+  <g transform="translate(36,414)">
+    <text class="name" x="0" y="12">Docker</text>
+    <text class="pct"  x="360" y="12" text-anchor="end">78%</text>
+    <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
+    <rect x="0" y="18" width="281" height="8" rx="4" fill="url(#g-dk)">
+      <animate attributeName="width" from="0" to="281" dur="0.9s" fill="freeze"/>
+    </rect>
+    <rect x="-90" y="18" width="90" height="8" fill="url(#shine)" opacity=".18">
+      <animate attributeName="x" from="-90" to="360" dur="2.4s" repeatCount="indefinite"/>
+    </rect>
+  </g>
 </svg>
