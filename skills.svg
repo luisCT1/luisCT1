@@ -1,145 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- skills.svg - Compatible con GitHub (sin filtros ni <style>) -->
-<svg xmlns="http://www.w3.org/2000/svg" width="460" height="450" viewBox="0 0 460 450">
-
-  <!-- Fondo con gradiente -->
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#0d1424"/>
-      <stop offset="1" stop-color="#0b1320"/>
-    </linearGradient>
-
-    <!-- Gradiente de brillo (para efecto barrido) -->
-    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"  stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.45"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-    </linearGradient>
-
-    <!-- Paletas por barra -->
-    <linearGradient id="g-js"  x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#fde047"/><stop offset="100%" stop-color="#f59e0b"/></linearGradient>
-    <linearGradient id="g-ts"  x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#60a5fa"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient>
-    <linearGradient id="g-html"x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#fb7185"/><stop offset="100%" stop-color="#ef4444"/></linearGradient>
-    <linearGradient id="g-css" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#93c5fd"/><stop offset="100%" stop-color="#2563eb"/></linearGradient>
-    <linearGradient id="g-py"  x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#34d399"/><stop offset="100%" stop-color="#10b981"/></linearGradient>
-    <linearGradient id="g-r"   x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#60a5fa"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient>
-    <linearGradient id="g-sql" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#93c5fd"/><stop offset="100%" stop-color="#2563eb"/></linearGradient>
-    <linearGradient id="g-dk"  x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#67e8f9"/><stop offset="100%" stop-color="#06b6d4"/></linearGradient>
-    <linearGradient id="g-tf"  x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#fb923c"/><stop offset="100%" stop-color="#f97316"/></linearGradient>
-  </defs>
-
-  <!-- Tarjeta -->
-  <rect x="10" y="10" width="440" height="430" rx="16" fill="url(#bg)" stroke="#233044" />
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="420" viewBox="0 0 460 420">
+  <!-- Card -->
+  <rect x="10" y="10" width="440" height="400" rx="16" fill="#0b1320" stroke="#233044"/>
 
   <!-- Título -->
-  <text x="36" y="48" fill="#e6edf3" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="18">
+  <text x="32" y="46" fill="#e6edf3" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">
     Nivel de dominio (skills)
   </text>
 
-  <!-- NOTA: ancho útil = 360. width = porcentaje * 3.6 -->
+  <!-- Nota: ancho útil = 360; width = porcentaje * 3.6 -->
 
-  <!-- ===== BARRA 1: JavaScript 90% (324) ===== -->
-  <g transform="translate(36,74)">
-    <text x="0"  y="12" fill="#e6edf3" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="13">JavaScript</text>
-    <text x="360" y="12" fill="#a6b3c3" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="13" text-anchor="end">90%</text>
+  <!-- 1: JavaScript 90% => 324 -->
+  <g transform="translate(32,70)">
+    <text x="0" y="12" fill="#e6edf3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">JavaScript</text>
+    <text x="360" y="12" fill="#a6b3c3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="end">90%</text>
     <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
-    <rect x="0" y="18" width="324" height="8" rx="4" fill="url(#g-js)">
+    <rect x="0" y="18" width="324" height="8" rx="4" fill="#f59e0b">
       <animate attributeName="width" from="0" to="324" dur="0.9s" fill="freeze"/>
     </rect>
-    <rect x="-90" y="18" width="90" height="8" fill="url(#shine)" opacity="0.18">
-      <animate attributeName="x" from="-90" to="360" dur="2.4s" repeatCount="indefinite"/>
-    </rect>
   </g>
 
-  <!-- ===== BARRA 2: TypeScript 78% (281) ===== -->
-  <g transform="translate(36,120)">
-    <text x="0"  y="12" fill="#e6edf3" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="13">TypeScript</text>
-    <text x="360" y="12" fill="#a6b3c3" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="13" text-anchor="end">78%</text>
+  <!-- 2: TypeScript 78% => 281 -->
+  <g transform="translate(32,114)">
+    <text x="0" y="12" fill="#e6edf3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">TypeScript</text>
+    <text x="360" y="12" fill="#a6b3c3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="end">78%</text>
     <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
-    <rect x="0" y="18" width="281" height="8" rx="4" fill="url(#g-ts)">
+    <rect x="0" y="18" width="281" height="8" rx="4" fill="#3b82f6">
       <animate attributeName="width" from="0" to="281" dur="0.9s" fill="freeze"/>
     </rect>
-    <rect x="-90" y="18" width="90" height="8" fill="url(#shine)" opacity="0.18">
-      <animate attributeName="x" from="-90" to="360" dur="2.4s" repeatCount="indefinite"/>
-    </rect>
   </g>
 
-  <!-- ===== BARRA 3: HTML 72% (259) ===== -->
-  <g transform="translate(36,166)">
-    <text x="0"  y="12" fill="#e6edf3" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="13">HTML</text>
-    <text x="360" y="12" fill="#a6b3c3" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="13" text-anchor="end">72%</text>
+  <!-- 3: HTML 72% => 259 -->
+  <g transform="translate(32,158)">
+    <text x="0" y="12" fill="#e6edf3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">HTML</text>
+    <text x="360" y="12" fill="#a6b3c3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="end">72%</text>
     <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
-    <rect x="0" y="18" width="259" height="8" rx="4" fill="url(#g-html)">
+    <rect x="0" y="18" width="259" height="8" rx="4" fill="#ef4444">
       <animate attributeName="width" from="0" to="259" dur="0.9s" fill="freeze"/>
     </rect>
-    <rect x="-90" y="18" width="90" height="8" fill="url(#shine)" opacity="0.18">
-      <animate attributeName="x" from="-90" to="360" dur="2.4s" repeatCount="indefinite"/>
-    </rect>
   </g>
 
-  <!-- ===== BARRA 4: CSS 69% (248) ===== -->
-  <g transform="translate(36,212)">
-    <text x="0"  y="12" fill="#e6edf3" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="13">CSS</text>
-    <text x="360" y="12" fill="#a6b3c3" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="13" text-anchor="end">69%</text>
+  <!-- 4: CSS 69% => 248 -->
+  <g transform="translate(32,202)">
+    <text x="0" y="12" fill="#e6edf3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">CSS</text>
+    <text x="360" y="12" fill="#a6b3c3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="end">69%</text>
     <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
-    <rect x="0" y="18" width="248" height="8" rx="4" fill="url(#g-css)">
+    <rect x="0" y="18" width="248" height="8" rx="4" fill="#2563eb">
       <animate attributeName="width" from="0" to="248" dur="0.9s" fill="freeze"/>
     </rect>
-    <rect x="-90" y="18" width="90" height="8" fill="url(#shine)" opacity="0.18">
-      <animate attributeName="x" from="-90" to="360" dur="2.4s" repeatCount="indefinite"/>
-    </rect>
   </g>
 
-  <!-- ===== BARRA 5: Python 88% (317) ===== -->
-  <g transform="translate(36,258)">
-    <text x="0"  y="12" fill="#e6edf3" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="13">Python</text>
-    <text x="360" y="12" fill="#a6b3c3" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="13" text-anchor="end">88%</text>
+  <!-- 5: Python 88% => 317 -->
+  <g transform="translate(32,246)">
+    <text x="0" y="12" fill="#e6edf3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Python</text>
+    <text x="360" y="12" fill="#a6b3c3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="end">88%</text>
     <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
-    <rect x="0" y="18" width="317" height="8" rx="4" fill="url(#g-py)">
+    <rect x="0" y="18" width="317" height="8" rx="4" fill="#10b981">
       <animate attributeName="width" from="0" to="317" dur="0.9s" fill="freeze"/>
     </rect>
-    <rect x="-90" y="18" width="90" height="8" fill="url(#shine)" opacity="0.18">
-      <animate attributeName="x" from="-90" to="360" dur="2.4s" repeatCount="indefinite"/>
-    </rect>
   </g>
 
-  <!-- ===== BARRA 6: R 84% (302) ===== -->
-  <g transform="translate(36,304)">
-    <text x="0"  y="12" fill="#e6edf3" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="13">R</text>
-    <text x="360" y="12" fill="#a6b3c3" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="13" text-anchor="end">84%</text>
+  <!-- 6: R 84% => 302 -->
+  <g transform="translate(32,290)">
+    <text x="0" y="12" fill="#e6edf3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">R</text>
+    <text x="360" y="12" fill="#a6b3c3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="end">84%</text>
     <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
-    <rect x="0" y="18" width="302" height="8" rx="4" fill="url(#g-r)">
+    <rect x="0" y="18" width="302" height="8" rx="4" fill="#3b82f6">
       <animate attributeName="width" from="0" to="302" dur="0.9s" fill="freeze"/>
     </rect>
-    <rect x="-90" y="18" width="90" height="8" fill="url(#shine)" opacity="0.18">
-      <animate attributeName="x" from="-90" to="360" dur="2.4s" repeatCount="indefinite"/>
-    </rect>
   </g>
 
-  <!-- ===== BARRA 7: SQL 80% (288) ===== -->
-  <g transform="translate(36,350)">
-    <text x="0"  y="12" fill="#e6edf3" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="13">SQL</text>
-    <text x="360" y="12" fill="#a6b3c3" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="13" text-anchor="end">80%</text>
+  <!-- 7: SQL 80% => 288 -->
+  <g transform="translate(32,334)">
+    <text x="0" y="12" fill="#e6edf3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">SQL</text>
+    <text x="360" y="12" fill="#a6b3c3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="end">80%</text>
     <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
-    <rect x="0" y="18" width="288" height="8" rx="4" fill="url(#g-sql)">
+    <rect x="0" y="18" width="288" height="8" rx="4" fill="#2563eb">
       <animate attributeName="width" from="0" to="288" dur="0.9s" fill="freeze"/>
     </rect>
-    <rect x="-90" y="18" width="90" height="8" fill="url(#shine)" opacity="0.18">
-      <animate attributeName="x" from="-90" to="360" dur="2.4s" repeatCount="indefinite"/>
-    </rect>
   </g>
 
-  <!-- ===== BARRA 8: Docker 78% (281) ===== -->
-  <g transform="translate(36,396)">
-    <text x="0"  y="12" fill="#e6edf3" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="13">Docker</text>
-    <text x="360" y="12" fill="#a6b3c3" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="13" text-anchor="end">78%</text>
+  <!-- 8: Docker 78% => 281 -->
+  <g transform="translate(32,378)">
+    <text x="0" y="12" fill="#e6edf3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Docker</text>
+    <text x="360" y="12" fill="#a6b3c3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="end">78%</text>
     <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
-    <rect x="0" y="18" width="281" height="8" rx="4" fill="url(#g-dk)">
+    <rect x="0" y="18" width="281" height="8" rx="4" fill="#06b6d4">
       <animate attributeName="width" from="0" to="281" dur="0.9s" fill="freeze"/>
     </rect>
-    <rect x="-90" y="18" width="90" height="8" fill="url(#shine)" opacity="0.18">
-      <animate attributeName="x" from="-90" to="360" dur="2.4s" repeatCount="indefinite"/>
-    </rect>
   </g>
-
 </svg>
