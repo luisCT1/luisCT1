@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="460" height="420" viewBox="0 0 460 420">
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="1368" viewBox="0 0 460 1368">
   <!-- Card -->
-  <rect x="10" y="10" width="440" height="400" rx="16" fill="#0b1320" stroke="#233044"/>
+  <rect x="10" y="10" width="440" height="1348" rx="16" fill="#0b1320" stroke="#233044"/>
 
   <!-- Título -->
   <text x="32" y="46" fill="#e6edf3" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">
@@ -12,81 +12,233 @@
 
   <!-- 1: JavaScript 90% => 324 -->
   <g transform="translate(32,70)">
-    <text x="0" y="12" fill="#e6edf3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">JavaScript</text>
-    <text x="360" y="12" fill="#a6b3c3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="end">90%</text>
+    <text x="0" y="12" fill="#e6edf3" font-size="13" font-weight="700">JavaScript</text>
+    <text x="360" y="12" fill="#a6b3c3" font-size="13" font-weight="700" text-anchor="end">90%</text>
     <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
-    <rect x="0" y="18" width="324" height="8" rx="4" fill="#f59e0b">
-      <animate attributeName="width" from="0" to="324" dur="0.9s" fill="freeze"/>
-    </rect>
+    <rect x="0" y="18" width="324" height="8" rx="4" fill="#f59e0b"><animate attributeName="width" from="0" to="324" dur="0.9s" fill="freeze"/></rect>
   </g>
 
   <!-- 2: TypeScript 78% => 281 -->
   <g transform="translate(32,114)">
-    <text x="0" y="12" fill="#e6edf3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">TypeScript</text>
-    <text x="360" y="12" fill="#a6b3c3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="end">78%</text>
+    <text x="0" y="12" fill="#e6edf3" font-size="13" font-weight="700">TypeScript</text>
+    <text x="360" y="12" fill="#a6b3c3" font-size="13" font-weight="700" text-anchor="end">78%</text>
     <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
-    <rect x="0" y="18" width="281" height="8" rx="4" fill="#3b82f6">
-      <animate attributeName="width" from="0" to="281" dur="0.9s" fill="freeze"/>
-    </rect>
+    <rect x="0" y="18" width="281" height="8" rx="4" fill="#3b82f6"><animate attributeName="width" from="0" to="281" dur="0.9s" fill="freeze"/></rect>
   </g>
 
   <!-- 3: HTML 72% => 259 -->
   <g transform="translate(32,158)">
-    <text x="0" y="12" fill="#e6edf3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">HTML</text>
-    <text x="360" y="12" fill="#a6b3c3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="end">72%</text>
+    <text x="0" y="12" fill="#e6edf3" font-size="13" font-weight="700">HTML</text>
+    <text x="360" y="12" fill="#a6b3c3" font-size="13" font-weight="700" text-anchor="end">72%</text>
     <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
-    <rect x="0" y="18" width="259" height="8" rx="4" fill="#ef4444">
-      <animate attributeName="width" from="0" to="259" dur="0.9s" fill="freeze"/>
-    </rect>
+    <rect x="0" y="18" width="259" height="8" rx="4" fill="#ef4444"><animate attributeName="width" from="0" to="259" dur="0.9s" fill="freeze"/></rect>
   </g>
 
   <!-- 4: CSS 69% => 248 -->
   <g transform="translate(32,202)">
-    <text x="0" y="12" fill="#e6edf3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">CSS</text>
-    <text x="360" y="12" fill="#a6b3c3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="end">69%</text>
+    <text x="0" y="12" fill="#e6edf3" font-size="13" font-weight="700">CSS</text>
+    <text x="360" y="12" fill="#a6b3c3" font-size="13" font-weight="700" text-anchor="end">69%</text>
     <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
-    <rect x="0" y="18" width="248" height="8" rx="4" fill="#2563eb">
-      <animate attributeName="width" from="0" to="248" dur="0.9s" fill="freeze"/>
-    </rect>
+    <rect x="0" y="18" width="248" height="8" rx="4" fill="#2563eb"><animate attributeName="width" from="0" to="248" dur="0.9s" fill="freeze"/></rect>
   </g>
 
   <!-- 5: Python 88% => 317 -->
   <g transform="translate(32,246)">
-    <text x="0" y="12" fill="#e6edf3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Python</text>
-    <text x="360" y="12" fill="#a6b3c3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="end">88%</text>
+    <text x="0" y="12" fill="#e6edf3" font-size="13" font-weight="700">Python</text>
+    <text x="360" y="12" fill="#a6b3c3" font-size="13" font-weight="700" text-anchor="end">88%</text>
     <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
-    <rect x="0" y="18" width="317" height="8" rx="4" fill="#10b981">
-      <animate attributeName="width" from="0" to="317" dur="0.9s" fill="freeze"/>
-    </rect>
+    <rect x="0" y="18" width="317" height="8" rx="4" fill="#10b981"><animate attributeName="width" from="0" to="317" dur="0.9s" fill="freeze"/></rect>
   </g>
 
   <!-- 6: R 84% => 302 -->
   <g transform="translate(32,290)">
-    <text x="0" y="12" fill="#e6edf3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">R</text>
-    <text x="360" y="12" fill="#a6b3c3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="end">84%</text>
+    <text x="0" y="12" fill="#e6edf3" font-size="13" font-weight="700">R</text>
+    <text x="360" y="12" fill="#a6b3c3" font-size="13" font-weight="700" text-anchor="end">84%</text>
     <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
-    <rect x="0" y="18" width="302" height="8" rx="4" fill="#3b82f6">
-      <animate attributeName="width" from="0" to="302" dur="0.9s" fill="freeze"/>
-    </rect>
+    <rect x="0" y="18" width="302" height="8" rx="4" fill="#3b82f6"><animate attributeName="width" from="0" to="302" dur="0.9s" fill="freeze"/></rect>
   </g>
 
-  <!-- 7: SQL 80% => 288 -->
+  <!-- 7: C++ 75% => 270 -->
   <g transform="translate(32,334)">
-    <text x="0" y="12" fill="#e6edf3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">SQL</text>
-    <text x="360" y="12" fill="#a6b3c3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="end">80%</text>
+    <text x="0" y="12" fill="#e6edf3" font-size="13" font-weight="700">C++</text>
+    <text x="360" y="12" fill="#a6b3c3" font-size="13" font-weight="700" text-anchor="end">75%</text>
     <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
-    <rect x="0" y="18" width="288" height="8" rx="4" fill="#2563eb">
-      <animate attributeName="width" from="0" to="288" dur="0.9s" fill="freeze"/>
-    </rect>
+    <rect x="0" y="18" width="270" height="8" rx="4" fill="#0ea5e9"><animate attributeName="width" from="0" to="270" dur="0.9s" fill="freeze"/></rect>
   </g>
 
-  <!-- 8: Docker 78% => 281 -->
+  <!-- 8: Rust 60% => 216 -->
   <g transform="translate(32,378)">
-    <text x="0" y="12" fill="#e6edf3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Docker</text>
-    <text x="360" y="12" fill="#a6b3c3" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="end">78%</text>
+    <text x="0" y="12" fill="#e6edf3" font-size="13" font-weight="700">Rust</text>
+    <text x="360" y="12" fill="#a6b3c3" font-size="13" font-weight="700" text-anchor="end">60%</text>
     <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
-    <rect x="0" y="18" width="281" height="8" rx="4" fill="#06b6d4">
-      <animate attributeName="width" from="0" to="281" dur="0.9s" fill="freeze"/>
-    </rect>
+    <rect x="0" y="18" width="216" height="8" rx="4" fill="#fb923c"><animate attributeName="width" from="0" to="216" dur="0.9s" fill="freeze"/></rect>
+  </g>
+
+  <!-- 9: Java 70% => 252 -->
+  <g transform="translate(32,422)">
+    <text x="0" y="12" fill="#e6edf3" font-size="13" font-weight="700">Java</text>
+    <text x="360" y="12" fill="#a6b3c3" font-size="13" font-weight="700" text-anchor="end">70%</text>
+    <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
+    <rect x="0" y="18" width="252" height="8" rx="4" fill="#f97316"><animate attributeName="width" from="0" to="252" dur="0.9s" fill="freeze"/></rect>
+  </g>
+
+  <!-- 10: Markdown 90% => 324 -->
+  <g transform="translate(32,466)">
+    <text x="0" y="12" fill="#e6edf3" font-size="13" font-weight="700">Markdown</text>
+    <text x="360" y="12" fill="#a6b3c3" font-size="13" font-weight="700" text-anchor="end">90%</text>
+    <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
+    <rect x="0" y="18" width="324" height="8" rx="4" fill="#22c55e"><animate attributeName="width" from="0" to="324" dur="0.9s" fill="freeze"/></rect>
+  </g>
+
+  <!-- 11: SQL 80% => 288 -->
+  <g transform="translate(32,510)">
+    <text x="0" y="12" fill="#e6edf3" font-size="13" font-weight="700">SQL</text>
+    <text x="360" y="12" fill="#a6b3c3" font-size="13" font-weight="700" text-anchor="end">80%</text>
+    <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
+    <rect x="0" y="18" width="288" height="8" rx="4" fill="#2563eb"><animate attributeName="width" from="0" to="288" dur="0.9s" fill="freeze"/></rect>
+  </g>
+
+  <!-- 12: RMarkdown 85% => 306 -->
+  <g transform="translate(32,554)">
+    <text x="0" y="12" fill="#e6edf3" font-size="13" font-weight="700">RMarkdown</text>
+    <text x="360" y="12" fill="#a6b3c3" font-size="13" font-weight="700" text-anchor="end">85%</text>
+    <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
+    <rect x="0" y="18" width="306" height="8" rx="4" fill="#38bdf8"><animate attributeName="width" from="0" to="306" dur="0.9s" fill="freeze"/></rect>
+  </g>
+
+  <!-- 13: Shiny 75% => 270 -->
+  <g transform="translate(32,598)">
+    <text x="0" y="12" fill="#e6edf3" font-size="13" font-weight="700">Shiny</text>
+    <text x="360" y="12" fill="#a6b3c3" font-size="13" font-weight="700" text-anchor="end">75%</text>
+    <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
+    <rect x="0" y="18" width="270" height="8" rx="4" fill="#60a5fa"><animate attributeName="width" from="0" to="270" dur="0.9s" fill="freeze"/></rect>
+  </g>
+
+  <!-- 14: TensorFlow 70% => 252 -->
+  <g transform="translate(32,642)">
+    <text x="0" y="12" fill="#e6edf3" font-size="13" font-weight="700">TensorFlow</text>
+    <text x="360" y="12" fill="#a6b3c3" font-size="13" font-weight="700" text-anchor="end">70%</text>
+    <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
+    <rect x="0" y="18" width="252" height="8" rx="4" fill="#f97316"><animate attributeName="width" from="0" to="252" dur="0.9s" fill="freeze"/></rect>
+  </g>
+
+  <!-- 15: PyTorch 65% => 234 -->
+  <g transform="translate(32,686)">
+    <text x="0" y="12" fill="#e6edf3" font-size="13" font-weight="700">PyTorch</text>
+    <text x="360" y="12" fill="#a6b3c3" font-size="13" font-weight="700" text-anchor="end">65%</text>
+    <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
+    <rect x="0" y="18" width="234" height="8" rx="4" fill="#ef4444"><animate attributeName="width" from="0" to="234" dur="0.9s" fill="freeze"/></rect>
+  </g>
+
+  <!-- 16: Keras 60% => 216 -->
+  <g transform="translate(32,730)">
+    <text x="0" y="12" fill="#e6edf3" font-size="13" font-weight="700">Keras</text>
+    <text x="360" y="12" fill="#a6b3c3" font-size="13" font-weight="700" text-anchor="end">60%</text>
+    <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
+    <rect x="0" y="18" width="216" height="8" rx="4" fill="#e11d48"><animate attributeName="width" from="0" to="216" dur="0.9s" fill="freeze"/></rect>
+  </g>
+
+  <!-- 17: Power BI 80% => 288 -->
+  <g transform="translate(32,774)">
+    <text x="0" y="12" fill="#e6edf3" font-size="13" font-weight="700">Power BI</text>
+    <text x="360" y="12" fill="#a6b3c3" font-size="13" font-weight="700" text-anchor="end">80%</text>
+    <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
+    <rect x="0" y="18" width="288" height="8" rx="4" fill="#facc15"><animate attributeName="width" from="0" to="288" dur="0.9s" fill="freeze"/></rect>
+  </g>
+
+  <!-- 18: Anaconda 85% => 306 -->
+  <g transform="translate(32,818)">
+    <text x="0" y="12" fill="#e6edf3" font-size="13" font-weight="700">Anaconda</text>
+    <text x="360" y="12" fill="#a6b3c3" font-size="13" font-weight="700" text-anchor="end">85%</text>
+    <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
+    <rect x="0" y="18" width="306" height="8" rx="4" fill="#22c55e"><animate attributeName="width" from="0" to="306" dur="0.9s" fill="freeze"/></rect>
+  </g>
+
+  <!-- 19: Docker 78% => 281 -->
+  <g transform="translate(32,862)">
+    <text x="0" y="12" fill="#e6edf3" font-size="13" font-weight="700">Docker</text>
+    <text x="360" y="12" fill="#a6b3c3" font-size="13" font-weight="700" text-anchor="end">78%</text>
+    <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
+    <rect x="0" y="18" width="281" height="8" rx="4" fill="#06b6d4"><animate attributeName="width" from="0" to="281" dur="0.9s" fill="freeze"/></rect>
+  </g>
+
+  <!-- 20: Google Cloud 65% => 234 -->
+  <g transform="translate(32,906)">
+    <text x="0" y="12" fill="#e6edf3" font-size="13" font-weight="700">Google Cloud</text>
+    <text x="360" y="12" fill="#a6b3c3" font-size="13" font-weight="700" text-anchor="end">65%</text>
+    <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
+    <rect x="0" y="18" width="234" height="8" rx="4" fill="#60a5fa"><animate attributeName="width" from="0" to="234" dur="0.9s" fill="freeze"/></rect>
+  </g>
+
+  <!-- 21: Linux 80% => 288 -->
+  <g transform="translate(32,950)">
+    <text x="0" y="12" fill="#e6edf3" font-size="13" font-weight="700">Linux</text>
+    <text x="360" y="12" fill="#a6b3c3" font-size="13" font-weight="700" text-anchor="end">80%</text>
+    <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
+    <rect x="0" y="18" width="288" height="8" rx="4" fill="#16a34a"><animate attributeName="width" from="0" to="288" dur="0.9s" fill="freeze"/></rect>
+  </g>
+
+  <!-- 22: Android 60% => 216 -->
+  <g transform="translate(32,994)">
+    <text x="0" y="12" fill="#e6edf3" font-size="13" font-weight="700">Android</text>
+    <text x="360" y="12" fill="#a6b3c3" font-size="13" font-weight="700" text-anchor="end">60%</text>
+    <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
+    <rect x="0" y="18" width="216" height="8" rx="4" fill="#22c55e"><animate attributeName="width" from="0" to="216" dur="0.9s" fill="freeze"/></rect>
+  </g>
+
+  <!-- 23: GitHub 85% => 306 -->
+  <g transform="translate(32,1038)">
+    <text x="0" y="12" fill="#e6edf3" font-size="13" font-weight="700">GitHub</text>
+    <text x="360" y="12" fill="#a6b3c3" font-size="13" font-weight="700" text-anchor="end">85%</text>
+    <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
+    <rect x="0" y="18" width="306" height="8" rx="4" fill="#94a3b8"><animate attributeName="width" from="0" to="306" dur="0.9s" fill="freeze"/></rect>
+  </g>
+
+  <!-- 24: VS Code 90% => 324 -->
+  <g transform="translate(32,1082)">
+    <text x="0" y="12" fill="#e6edf3" font-size="13" font-weight="700">VS Code</text>
+    <text x="360" y="12" fill="#a6b3c3" font-size="13" font-weight="700" text-anchor="end">90%</text>
+    <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
+    <rect x="0" y="18" width="324" height="8" rx="4" fill="#3b82f6"><animate attributeName="width" from="0" to="324" dur="0.9s" fill="freeze"/></rect>
+  </g>
+
+  <!-- 25: Spyder 85% => 306 -->
+  <g transform="translate(32,1126)">
+    <text x="0" y="12" fill="#e6edf3" font-size="13" font-weight="700">Spyder</text>
+    <text x="360" y="12" fill="#a6b3c3" font-size="13" font-weight="700" text-anchor="end">85%</text>
+    <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
+    <rect x="0" y="18" width="306" height="8" rx="4" fill="#ef4444"><animate attributeName="width" from="0" to="306" dur="0.9s" fill="freeze"/></rect>
+  </g>
+
+  <!-- 26: Photoshop 70% => 252 -->
+  <g transform="translate(32,1170)">
+    <text x="0" y="12" fill="#e6edf3" font-size="13" font-weight="700">Photoshop</text>
+    <text x="360" y="12" fill="#a6b3c3" font-size="13" font-weight="700" text-anchor="end">70%</text>
+    <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
+    <rect x="0" y="18" width="252" height="8" rx="4" fill="#60a5fa"><animate attributeName="width" from="0" to="252" dur="0.9s" fill="freeze"/></rect>
+  </g>
+
+  <!-- 27: After Effects 60% => 216 -->
+  <g transform="translate(32,1214)">
+    <text x="0" y="12" fill="#e6edf3" font-size="13" font-weight="700">After Effects</text>
+    <text x="360" y="12" fill="#a6b3c3" font-size="13" font-weight="700" text-anchor="end">60%</text>
+    <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
+    <rect x="0" y="18" width="216" height="8" rx="4" fill="#8b5cf6"><animate attributeName="width" from="0" to="216" dur="0.9s" fill="freeze"/></rect>
+  </g>
+
+  <!-- 28: AutoCAD 75% => 270 -->
+  <g transform="translate(32,1258)">
+    <text x="0" y="12" fill="#e6edf3" font-size="13" font-weight="700">AutoCAD</text>
+    <text x="360" y="12" fill="#a6b3c3" font-size="13" font-weight="700" text-anchor="end">75%</text>
+    <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
+    <rect x="0" y="18" width="270" height="8" rx="4" fill="#0696D7"><animate attributeName="width" from="0" to="270" dur="0.9s" fill="freeze"/></rect>
+  </g>
+
+  <!-- 29: GRASS GIS 65% => 234 -->
+  <g transform="translate(32,1302)">
+    <text x="0" y="12" fill="#e6edf3" font-size="13" font-weight="700">GRASS GIS</text>
+    <text x="360" y="12" fill="#a6b3c3" font-size="13" font-weight="700" text-anchor="end">65%</text>
+    <rect x="0" y="18" width="360" height="8" rx="4" fill="#1f2a44"/>
+    <rect x="0" y="18" width="234" height="8" rx="4" fill="#22c55e"><animate attributeName="width" from="0" to="234" dur="0.9s" fill="freeze"/></rect>
   </g>
 </svg>
