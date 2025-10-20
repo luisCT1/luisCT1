@@ -109,28 +109,9 @@ desarrollando **modelos predictivos y analíticos** que optimizan procesos y dec
 ## 📊 Nivel de dominio 
 
 <p align="center">
-  <img src="./skills.svg" alt="Nivel de dominio de habilidades" width="460">
+  <img src="https://raw.githubusercontent.com/luisCT1/luisCT1/main/skills.svg" alt="Nivel de dominio de habilidades" width="460">
 </p>
 
----
-
-## 📦 Proyectos destacados
-
-### 🧠 Analítica con Python + R  
-📊 Pipelines reproducibles, notebooks limpios y visualizaciones claras.  
-[🔗 Ver repo](#)
-
----
-
-### ⚙️ API en Docker  
-🐳 Microservicio ligero con buenas prácticas de CI/CD y contenedores.  
-[🔗 Ver repo](#)
-
----
-
-### 💻 C++ Performance  
-⚡ Ejemplos de estructuras de datos y optimización *low-level*.  
-[🔗 Ver repo](#)
 
 ---
 
@@ -138,19 +119,20 @@ desarrollando **modelos predictivos y analíticos** que optimizan procesos y dec
 ¿Colaboramos? Escríbeme o revisa mi código 👇  
 
 ⭐ [GitHub](https://github.com/luisCT1)  
-✉️ [Email](mailto:luiscohen2014@gmail.com)  
-🔗 [LinkedIn](https://www.linkedin.com/)  
+✉️ [Email](mailto:lcohent@unal.edu.co)  
+🔗 [LinkedIn](linkedin.com/in/luis-miguel-cohen-teheran-a39053337/?skipRedirect=true)  
 
 ---
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=luisCT1&show_icons=true&theme=tokyonight&hide_border=true" alt="Estadísticas de GitHub de Luis Cohen" />
+  <img src="https://github-readme-stats.vercel.app/api?username=luisCT1&show_icons=true&theme=tokyonight&hide_border=true&locale=es&title_color=6EE7B7&icon_color=F59E0B" alt="Estadísticas de GitHub de Luis Cohen" />
 </p>
 
+
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=luisCT1&theme=tokyonight&hide_border=true" alt="Racha de contribuciones de Luis Cohen" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=luisCT1&theme=tokyonight&hide_border=true&locale=es&date_format=j%20M%5B%20Y%5D&currStreakLabel=F59E0B&fire=F59E0B&ring=6EE7B7&currStreakNum=6EE7B7&sideNums=6EE7B7&sideLabels=6EE7B7" alt="Racha de contribuciones de Luis Cohen" />
 </p>
 
 ---
 
-**Hecho con 💚 y buen café. — © 2025 Luis Cohen**
+**Hecho con 💚. — © 2025 Luis Cohen**
