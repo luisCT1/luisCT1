@@ -22,7 +22,7 @@
 
 
 
-## 🧠 Sobre mí
+## Sobre mí
 
 🐮 Soy un apasionado por el **mejoramiento genético en animales**, la **programación** y la **inteligencia artificial**.  
 Me gusta construir productos simples, rápidos y útiles.  
@@ -33,32 +33,32 @@ He trabajado en proyectos relacionados con el **mejoramiento genético en bovino
 
 ---
 
-### 🐂 Experiencia en mejoramiento genético
+### Experiencia en mejoramiento genético
 
-🌿 Actualmente realizo las **evaluaciones genéticas de [Francia y Lusitania](http://instagram.com/haciendasfranciaylusitania/?hl=es)**,  
+Actualmente realizo las **evaluaciones genéticas de [Francia y Lusitania](http://instagram.com/haciendasfranciaylusitania/?hl=es)**,  
 una reconocida **ganadería de Brahman rojo** en Montería, Colombia.  
 
-🐄 También he desarrollado modelos para **[Hacienda El Herrero](https://www.instagram.com/el_herrero_holstein/)**,  
+También he desarrollado modelos para **[Hacienda El Herrero](https://www.instagram.com/el_herrero_holstein/)**,  
 especializada en **Holsteins** en San Pedro de los Milagros, Colombia.  
 
-📊 Colaboro activamente con **[Data Plus](https://www.instagram.com/dataplusempresa/)**,  
+Colaboro activamente con **[Data Plus](https://www.instagram.com/dataplusempresa/)**,  
 donde trabajamos en **evaluaciones genéticas en diferentes especies**, entre ellas búfalos 🦬, y realizamos **análisis de datos** en distintas áreas.
 
 ---
 
-### ⚙️ Ciencia de datos aplicada
+### Ciencia de datos aplicada
 
-⚡ Actualmente colaboro con **[AURES BAJO](https://www.aures.com.co/quienes-somos)** (hidroeléctrica en Colombia),  
+Actualmente colaboro con **[AURES BAJO](https://www.aures.com.co/quienes-somos)** (hidroeléctrica en Colombia),  
 desarrollando **modelos predictivos y analíticos** que optimizan procesos y decisiones energéticas.  
 
 🔬 Además, he trabajado junto a **[CEERA](https://ceera.co/)** en proyectos de investigación, innovación y desarrollo sostenible.  
 
 ---
 
-💡 Mi enfoque combina la ciencia, la tecnología y la creatividad para **convertir datos en decisiones**.  
-🌎 Busco seguir integrando la **IA y la genética animal** con herramientas modernas de programación.
+ Mi enfoque combina la ciencia, la tecnología y la creatividad para **convertir datos en decisiones**.  
+Busco seguir integrando la **IA y la genética animal** con herramientas modernas de programación.
 
-## 💡 Herramientas y tecnologías que uso
+##  Herramientas y tecnologías que uso
 
 <p align="center">
 
@@ -118,9 +118,9 @@ desarrollando **modelos predictivos y analíticos** que optimizan procesos y dec
 ## 📬 Contacto
 ¿Colaboramos? Escríbeme o revisa mi código 👇  
 
-⭐ [GitHub](https://github.com/luisCT1)  
-✉️ [Email](mailto:lcohent@unal.edu.co)  
-🔗 [LinkedIn](linkedin.com/in/luis-miguel-cohen-teheran-a39053337/?skipRedirect=true)  
+[GitHub](https://github.com/luisCT1)  
+[Email](mailto:lcohent@unal.edu.co)  
+[LinkedIn](linkedin.com/in/luis-miguel-cohen-teheran-a39053337/?skipRedirect=true)  
 
 ---
 
